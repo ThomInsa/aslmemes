@@ -12,10 +12,7 @@ function loadGiscus(filename) {
     script.setAttribute("data-reactions-enabled", "1");
     script.setAttribute("data-emit-metadata", "0");
     script.setAttribute("data-input-position", "top");
-    const cssUrl = `https://${window.location.hostname}/giscus-style.css`;
-    script.setAttribute("data-theme", cssUrl);
-
-    script.setAttribute("data-reactions-enabled", "1");
+    script.setAttribute("data-theme", "preferred_color_scheme");
     script.setAttribute("data-lang", "fr");
     script.setAttribute("crossorigin", "anonymous");
     script.async = true;
