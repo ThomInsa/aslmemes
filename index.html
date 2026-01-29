@@ -11,12 +11,19 @@
 
     <!-- Modal pour les détails -->
     <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-        <!-- Zone de vote Giscus -->
-        <div class="giscus-frame">
-            <div class="giscus"></div>
+        <div class="modal-container">
+            <span class="close">&times;</span>
+            <div class="modal-layout">
+                <div class="modal-left">
+                    <img class="modal-image" id="img01">
+                    <div id="caption"></div>
+                </div>
+                <div class="modal-right">
+                    <div class="giscus-frame">
+                        <div class="giscus"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

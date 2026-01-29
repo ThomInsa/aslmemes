@@ -43,13 +43,17 @@ fetch('_data/memes.json')
                 const modalImg = document.getElementById("img01");
                 const captionText = document.getElementById("caption");
                 
-                modal.style.display = "block";
                 modalImg.src = this.src;
                 // Affichage des infos de l'auteur
                 captionText.innerHTML = `
                     <strong>Auteur :</strong> ${meme.author}<br>
                     <strong>Date :</strong> ${new Date(meme.date).toLocaleDateString()}
                 `;
+
+                modal.style.display = "flex";
+                setTimeout(() => {
+                    modal.classList.add('active');
+                }, 10);
 
                 // Charger le système de vote pour CE meme
                 loadGiscus(meme.filename);
@@ -62,5 +66,19 @@ fetch('_data/memes.json')
 
 // Fermeture de la modale
 document.querySelector('.close').onclick = function() { 
-  document.getElementById('modal').style.display = "none";
+    const modal = document.getElementById('modal');
+    modal.classList.remove('active');
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 300);
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target == modal) {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 300);
+    }
 }
