@@ -1,0 +1,15 @@
+/* Cache la zone d'écriture de commentaire */
+.giscus-comment-box {
+    display: none !important;
+}
+
+/* Cache la liste des commentaires déjà postés */
+.giscus-comments {
+    display: none !important;
+}
+
+/* Optionnel : Ajuste la marge de la barre de réactions */
+.giscus-reactions {
+    margin-top: 0 !important;
+    border: none !important;
+}
