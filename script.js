@@ -41,8 +41,13 @@ function renderGallery(memes) {
             
             modalImg.src = this.src;
             captionText.innerHTML = `
-                <span class="caption-author">${meme.author}</span>
-                <span class="caption-date">${new Date(meme.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                <div class="author-info">
+                    <img src="${meme.author_avatar || 'https://github.com/identicons/'+meme.author+'.png'}" class="author-avatar" alt="${meme.author}">
+                    <div class="author-details">
+                        <a href="${meme.author_url || '#'}" target="_blank" class="caption-author">${meme.author}</a>
+                        <span class="caption-date">${new Date(meme.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                    </div>
+                </div>
             `;
 
             modal.style.display = "flex";

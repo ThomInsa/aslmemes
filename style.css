@@ -43,17 +43,38 @@ h1 {
     color: #262626;
 }
 
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #efefef;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+}
+
 .caption-author {
     font-weight: 600;
-    display: block;
-    font-size: 1.1em;
-    margin-bottom: 4px;
+    text-decoration: none;
+    color: #262626;
+    font-size: 1em;
+}
+
+.caption-author:hover {
+    text-decoration: underline;
 }
 
 .caption-date {
     color: #8e8e8e;
     font-size: 0.85em;
-    display: block;
 }
 
 
